@@ -163,8 +163,7 @@ def busca_profundidade(linha_inicio, coluna_incial, linha_objetivo, coluna_objet
             return custo, node
         visitado.append(node)
         desenhar_agente(node)
-        time.sleep(
-            1)  # Tempo de Movimentação do Agente
+        time.sleep(0.1)  # Tempo de Movimentação do Agente
         turtle.update()
         expanded_nodes = expandir_no(node, visitado)
         custo += len(expanded_nodes)
@@ -188,7 +187,7 @@ def busca_gulosa(linha_inicio, coluna_incial, linha_objetivo, coluna_objetivo):
         nodes.remove(node)
         visitado.append(node)
         desenhar_agente(node)
-        time.sleep(0.5)  # Tempo de Movimentação do Agente
+        time.sleep(0.1)  # Tempo de Movimentação do Agente
         turtle.update()
         if node.row == linha_objetivo and node.column == coluna_objetivo:
             turtle.done()
